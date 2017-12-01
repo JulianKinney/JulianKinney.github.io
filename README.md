@@ -1,2 +1,0 @@
-# JulianKinney.github.io
-portfolio
