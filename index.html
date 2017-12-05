@@ -13,7 +13,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
 .bgimg {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('file:///C:/MAMP/htdocs/pix/space2.jpg');
+    background-image: url('pix/space2.jpg');
     background-size: 100%;
     min-height: 80%;
 }
@@ -36,8 +36,107 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
   <div class="w3-display-container w3-center">
     <link href="main.css" type="text/css" rel="stylesheet" />
     <font face="sansation" color="white">
-    <div class="w3-display-middle w3-text-white w3-text-xlarge w3-container" style="font-size:350%">Julian Kinney</div>
-      <img src='file:///C:/Users/Julian%20Kinney/Desktop/Skewl/Web/bg%20design%20final%20higher%20quality.png'>
+    <div class="w3-display-middle w3-text-white w3-text-xlarge w3-container" style="position:absolute; left:770px; top:250px; font-size:325% ">Julian Kinney</div>
+    <font face="Lato" color="white">
+      <img src="pix/highqbg.png">
+      <head>
+      <style>
+      body {
+          font-family: "Lato", sans-serif;
+      }
+
+      .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #222;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+      }
+
+      .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+      }
+
+      .sidenav a:hover {
+          color: #1B8CF1;
+      }
+
+      .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 72px;
+          margin-left: 50px;
+      }
+
+      #main {
+          transition: margin-left .5s;
+          padding: 16px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+      </head>
+      <body>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <font face="sansation" color="white">
+        <p>
+          <a href="#home">
+            <img border="0" alt="W3Schools" src="pix/homeicon2.png" width="400" height="200" style="width:100px; height:100px;">
+        </a>
+        </p>
+
+        <p>
+          <a href="#projects">
+            <img border="0" alt="W3Schools" src="pix/galleryicon.png" width="400" height="200" style="width:100px; height:100px;">
+        </a>
+        </p>
+
+        <p>
+          <a href="#about">
+            <img border="0" alt="W3Schools" src="pix/abouticon2.png" width="400" height="200" style="width:100px; height:100px;">
+        </a>
+        </p>
+
+        <p>
+          <a href="#contact">
+            <img border="0" alt="W3Schools" src="pix/contacticon.png" width="400" height="200" style= "width:100px; height:100px;">
+        </a>
+        </p>
+      </div>
+
+      <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menus</span>
+      </div>
+
+      <script>
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "0px";
+      }
+
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
+
+      </body>
       </div>
 
 
@@ -46,13 +145,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
 <!-- Menu Container -->
 <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="projects">
   <div class="w3-content">
+    <div class="project-container">
+    </div>
+
     <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Projects</h1>
     <div class="w3-row w3-center w3-border w3-border-dark-grey">
       <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-blue">Schoolwork</div>
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-blue">Motion Graphics</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-blue">Animations</div>
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-blue">Animation</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
         <div class="w3-col s4 tablink w3-padding-large w3-hover-blue">Other</div>
@@ -61,26 +163,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
 
     <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
       <iframe src="https://player.vimeo.com/video/244921725" width="950" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-      <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
-      <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
-      <hr>
-
-      <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
-      <hr>
-
-      <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
-      <hr>
-
-      <h1><b>Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
-      <hr>
-
-      <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+      <iframe src="https://player.vimeo.com/video/246002252" width="950" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/246003380" width="950" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 
     <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
@@ -150,6 +234,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
         margin: auto;
         padding: 0;
         width: 90%;
+        height: 90%;
         max-width: 1200px;
       }
 
@@ -160,7 +245,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
         top: 10px;
         right: 25px;
         font-size: 35px;
-        font-weight: bold;
+        font-weight: normal;
       }
 
       .close:hover,
@@ -251,16 +336,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
 
       <div class="row">
         <div class="column">
-          <img src="file:///C:/MAMP/htdocs/pix/test2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          <img src="pix/test2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
         </div>
         <div class="column">
-          <img src="file:///C:/MAMP/htdocs/pix/test.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+          <img src="pix/test.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
         </div>
         <div class="column">
-          <img src="file:///C:/MAMP/htdocs/pix/test3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+          <img src="pix/test3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
         </div>
         <div class="column">
-          <img src="file:///C:/MAMP/htdocs/pix/test4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+          <img src="pix/test4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
         </div>
       </div>
 
@@ -270,22 +355,22 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
 
           <div class="mySlides">
             <div class="numbertext">1 / 4</div>
-            <img src="file:///C:/MAMP/htdocs/pix/test2.jpg" style="width:100%">
+            <img src="pix/test2.jpg" style="width:100%">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">2 / 4</div>
-            <img src="file:///C:/MAMP/htdocs/pix/test.jpg" style="width:100%">
+            <img src="pix/test.jpg" style="width:100%">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">3 / 4</div>
-            <img src="file:///C:/MAMP/htdocs/pix/test3.jpg" style="width:100%">
+            <img src="pix/test3.jpg" style="width:100%">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">4 / 4</div>
-            <img src="file:///C:/MAMP/htdocs/pix/test4.jpg" style="width:100%">
+            <img src="pix/test4.jpg" style="width:100%">
           </div>
 
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -297,16 +382,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
 
 
           <div class="column">
-            <img class="demo cursor" src="file:///C:/MAMP/htdocs/pix/test2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+            <img class="demo cursor" src="pix/test2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
           </div>
           <div class="column">
-            <img class="demo cursor" src="file:///C:/MAMP/htdocs/pix/test.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+            <img class="demo cursor" src="pix/test.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
           </div>
           <div class="column">
-            <img class="demo cursor" src="file:///C:/MAMP/htdocs/pix/test3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            <img class="demo cursor" src="pix/test3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
           </div>
           <div class="column">
-            <img class="demo cursor" src="file:///C:/MAMP/htdocs/pix/test4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            <img class="demo cursor" src="pix/test4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
           </div>
         </div>
       </div>
@@ -360,9 +445,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
 <div class="w3-container w3-padding-64 w3-aqua w3-grayscale w3-xlarge" style="width:100%;height:1200px;" id="about">
 <div class="w3-content">
 <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
-  <p><h3>Hi, My name is Julian Kinney. I'm 19 years old and currently attend University of Connecticut in Stamford. I began using adobe products in high school and as a result my current major is Digital Media and Design with a concentration in animation. I have intermediate experience in photoshop, after effects, and illustrator, as well as digital drawing.</h3></p>
+  <p><h3>Hi, my name is Julian Kinney. I'm 19 years old and currently attend University of Connecticut in Stamford. I began using adobe products in high school and as a result my current major is Digital Media and Design with a concentration in animation. I have intermediate experience in photoshop, after effects, and illustrator, as well as digital drawing.</h3></p>
+  <font face="sansation" color="black">
 
-
+    <a download href="Resume.pdf">Resume</a>
 </div>
 </div>
 
@@ -375,31 +461,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "sansation", sans-serif}
 
 <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" style="height:500px;">
   <div class="w3-content">
-    
-
-    <p>
-      <a href="#home">
-        <img border="0" alt="W3Schools" src="file:///C:/Users/Julian%20Kinney/Desktop/Skewl/Web/home%20icon2.png" width="400" height="200" style="position: fixed; top:650px; left:1400px; size:250%; width:100px; height:100px;">
-    </a>
-    </p>
-
-    <p>
-      <a href="#projects">
-        <img border="0" alt="W3Schools" src="file:///C:/Users/Julian%20Kinney/Desktop/Skewl/Web/gallery%20icon.png" width="400" height="200" style="position: fixed; top:450px; left:1400px; width:100px; height:100px;">
-    </a>
-    </p>
-
-    <p>
-      <a href="#about">
-        <img border="0" alt="W3Schools" src="file:///C:/Users/Julian%20Kinney/Desktop/Skewl/Web/about%20icon.png" width="400" height="200" style="position: fixed; top:250px; left:1400px; width:100px; height:100px;">
-    </a>
-    </p>
-
-    <p>
-      <a href="#contact">
-        <img border="0" alt="W3Schools" src="file:///C:/Users/Julian%20Kinney/Desktop/Skewl/Web/contact%20icon.png" width="400" height="200" style="position: fixed; top:50px; left:1400px; width:100px; height:100px;">
-    </a>
-    </p>
     <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
     <p>
       <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Email</a>
