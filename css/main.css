@@ -25,7 +25,7 @@ html, body {
 
 @font-face{
   font-family: 'sansation';
-  src: url('/Fonts/Sansation_bold.ttf');
+  src: url("/fonts/Sansation_bold.ttf");
   font-style: normal;
   font-weight: 100;
 }
