@@ -1,0 +1,36 @@
+/*
+body{
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+  font-family: Sansation_Bold;
+  font size: 22px;
+  width: 960px;
+  margin: 60px; auto;
+  text-align: center;
+}
+
+@font-face{
+  font-family: "Sansation_Bold";
+  src: url('Sansation_Bold.otf') format('embedded-opentype'),
+  url('Sansation_Bold.woff') format('opentype');
+}*/
+
+html, body {
+  paddding-top: 400em;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@font-face{
+  font-family: 'sansation';
+  src: url('fonts/Sansation_bold.ttf');
+  font-style: normal;
+  font-weight: 100;
+}
+
+p {
+  font-family: sansation;
+  font-weight: 100;
+}
